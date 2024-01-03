@@ -25,7 +25,7 @@ leverage the library for personal use.
 - **User-Friendly Interface**: Offers a clean and intuitive interface for users to interact with the virtual library,
   ensuring a pleasant and productive experience.
 
-## Getting Started:
+## Getting Started ( TBD ):
 
 - **Installation**: Provide instructions on how to install and set up the Alexandria Project on various platforms using
   Docker Compose.
