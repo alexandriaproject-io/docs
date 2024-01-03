@@ -1,70 +1,60 @@
-# docs
-Alexandria project architecture and documentation
+# Welcome to the Alexandria Project
 
-## docker compose setup
-This guide will help you set up and run a variety of services using Docker Compose.
+A modern ode to the ancient seat of knowledge. At its core, Alexandria is a virtual library, meticulously organized and
+managed by an AI librarian. This project is designed to leverage the power of NoSQL and VectorDB to create an efficient,
+intelligent storage and retrieval system for a vast array of information.
 
-### Prerequisites
-Before you begin ensure you have the following requirements:
+## What is the Alexandria Project?
 
-- [docker, docker compose](https://docs.docker.com/get-docker) installed.
+The Alexandria Project is a virtual library platform that uses cutting-edge technology to manage and provide access to a
+wide variety of data. It is designed to be a central repository for knowledge, akin to the great Library of Alexandria,
+but for the digital age. The project combines MongoDB, a NoSQL database known for its scalability and flexibility, with
+Milvus, a powerful vector database for embedding management and similarity search, under the guidance of an AI
+librarian. With Docker Compose, the entire project can run on your PC, allowing you to upload your own documents and
+leverage the library for personal use.
 
-- **ports available**: Each service is mapped to specific ports as defined in the Docker Compose file. Ensure these ports are available on your host machine.
+## Key Features:
 
-### Services Overview
-This Docker Compose setup includes the following services:
+- **Your AI Librarian**: An intelligent assistant powered by artificial intelligence, designed to categorize, manage,
+  and retrieve information efficiently. Use any LLM such as Llama 2, Mistral, or GPT as the core of the project.
+- **MongoDB Integration**: Utilizes MongoDB for robust data storage, handling a wide variety of document types and
+  structures with ease.
+- **Milvus Implementation**: Incorporates Milvus for its advanced vector search capabilities, enhancing the speed and
+  accuracy of data retrieval.
+- **Scalable Architecture**: Designed to scale horizontally, accommodating growing amounts of data and users seamlessly.
+- **User-Friendly Interface**: Offers a clean and intuitive interface for users to interact with the virtual library,
+  ensuring a pleasant and productive experience.
 
-- Redis (v6.2, Alpine): A key-value store used for caching and as a message broker.
-- MongoDB (v4.4): A NoSQL database for storing JSON-like documents.
-- RabbitMQ (v3.7.28, Management): A messaging broker that facilitates the efficient communication between different parts of the application.
-- NATS (v2.9.22, Alpine): A lightweight, high-performance messaging system for microservices.
-- Milvus (v2.3.3): A powerful open-source vector database for AI applications.
-  - Includes etcd for distributed configuration and service discovery.
-  - MinIO for object storage.
-- HttpBin (kennethreitz/httpbin): A simple HTTP request & response service.
+## Getting Started:
 
-### Configuration
+- **Installation**: Provide instructions on how to install and set up the Alexandria Project on various platforms using
+  Docker Compose.
+- **Documentation**: Link to detailed documentation, including how to use the AI librarian, how to add data to the
+  library, and how to retrieve it.
+- **Contribute**: Encourage open-source contributions by providing guidelines for contributing to the project.
 
-#### Environment Variables
-You can modify environment variables for the Docker Compose configuration. These can be defined in a .env file located at the root of your project directory.
+## Vision and Goals:
 
-Example .env File
-```bash
-# General settings
-DOCKER_VOLUME_DIRECTORY=./data
+Our vision is to leverage existing and upcoming AI technologies like LLMs and Vector Databases to create the most
+advanced Retrieval-Augmented Generation (RAG) implementation.
 
-# Redis configuration
-REDIS_PASSWORD=your_redis_password
+### Short Term Goals:
 
-# MongoDB configuration
-MONGO_INITDB_ROOT_USERNAME=admin
-MONGO_INITDB_ROOT_PASSWORD=admin
+- Develop a Proof of Concept (POC) demonstrating the basic implementation of RAG working seamlessly.
+- Enable users to upload and manage their documents within the virtual library effortlessly.
 
-# RabbitMQ configuration
-RABBITMQ_ERLANG_COOKIE=secret_cookie
-RABBITMQ_DEFAULT_USER=admin
-RABBITMQ_DEFAULT_PASS=admin
+### Long Term Goals:
 
-# MinIO configuration
-MINIO_ACCESS_KEY=minioadmin
-MINIO_SECRET_KEY=minioadmin
-```
+- Enhance the AI's understanding of the data and the user, allowing for personalized and context-aware interactions.
+- Remember conversations and user preferences to provide more accurate and relevant results over time.
+- Develop specific vector representations for data to enhance the precision and relevance of search results.
 
-#### Volumes
-Persistent data for services like MongoDB, Redis, and RabbitMQ is stored in Docker volumes. The default path is set to ./volumes/[service_name] but can be customized via the DOCKER_VOLUME_DIRECTORY environment variable.
+## Community and Support:
 
-### Running the Services
-To start all services, use the following command:
-```bash
-docker-compose up -d
-```
-If you make changes to the configuration and want to force a recreation of the services, use:
-```bash
-docker-compose up -d --force-recreate
-```
+We invite you to join us in building this beacon of knowledge. Together, we can create a repository that stands the test
+of time, much like the ancient library it's named after.
 
-### Troubleshooting
-If you encounter any issues, refer to the service logs using:
-```bash
-docker-compose logs [service_name]
-```
+- **Discord**: TBD
+- **Reddit**: [Join our community](https://www.reddit.com/r/alexandria_project/)
+- **Reddit**: [Github](https://github.com/alexandriaproject-io)
+
