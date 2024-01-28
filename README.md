@@ -6,12 +6,12 @@ intelligent storage and retrieval system for a vast array of information.
 
 ## What is the Alexandria Project?
 
-The Alexandria Project is a virtual library platform that uses cutting-edge technology to manage and provide access to a
-wide variety of data. It is designed to be a central repository for knowledge, akin to the great Library of Alexandria,
-but for the digital age. The project combines MongoDB, a NoSQL database known for its scalability and flexibility, with
-Milvus, a powerful vector database for embedding management and similarity search, under the guidance of an AI
-librarian. With Docker Compose, the entire project can run on your PC, allowing you to upload your own documents and
-leverage the library for personal use.
+The Alexandria Project is capable of handling tasks ranging from simple searches for books or chapters to more complex activities like comparing research papers, coding, or synthesizing new books and research papers based on existing materials.
+This system is an innovative platform designed to harness the power of AI and Retrieval-Augmented Generation (RAG) for document management and interaction. It integrates Large Language Models (LLM) with a vector database, enabling advanced search, response, and document creation capabilities. 
+
+Central to its design is the flexibility to use various pre-trained LLMs or to train custom models, enhancing performance and adaptability to specific needs. The project is open-source, ensuring accessibility and customization. It is optimized to run efficiently on personal computers using Docker compose or as a collection of individual services, while also being scalable and production-ready for deployment in more extensive environments like Kubernetes, OpenShift, EKS, GCP, and Azure.
+
+This approach combines the vast potential of AI in document handling with the scalability of modern cloud and containerization technologies, making it a versatile tool for both personal and professional use.
 
 ## Key Features:
 
